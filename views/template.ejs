@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+    Elysse Ahmad Yusri
+    -->
+    <meta charset='utf-8' />
+    <meta name="viewport" content="width=device-width" /> 
+    <title>testing</title>
+
+    <%- `<style>@import "${cssfile}"</style>` -%>
+    <%- `<script src="${jsfile}"></script>` -%>
+</head>
+
+<body>
+    <h1>testing</h1>
+    <div>
+        <ul>
+        <li><a href='.' class='nav'>Home</a></li>
+        <li><a href='.' class='nav'>Placeholder 1</a></li>
+        <li><a href='.' class='nav'>Placeholder 2</a></li>
+        </ul>
+    </div>
+    <div id='textbox'>
+        <h3>Description</h3>
+    <%- include(page); -%>
+    <footer>
+        <p>2024 Elysse Ahmad Yusri</p>
+    </footer>
+    </body>
+</html>        
