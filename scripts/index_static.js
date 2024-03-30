@@ -12,8 +12,8 @@ function getClass(foo) { return document.getElementsByClassName(foo); }
 getId('brightness').onclick = changeBrightness;
 
 function changeBrightness () {
-    var brightness = getClass('csslink')[0].href.substr(53);
-    if (brightness == "night.css"){
+    var brightness = getClass('csslink')[0].href.substr(-5);
+    if (brightness == "t.css"){
         getClass('csslink')[0].setAttribute('href', './styles/day.css'); 
     }
     else {
