@@ -19,4 +19,5 @@ function changeBrightness () {
     else {
         getClass('csslink')[0].setAttribute('href', './styles/night.css'); 
     }
+    console.log(brightness);
 }
