@@ -1,0 +1,42 @@
+html { scroll-padding-top: 80px; }
+
+body { font-family: sans-serif; text-align: center; background-color: #111111; color: white; margin: 80px auto; margin-bottom: 0px }
+h1 { padding: 40px; display: flex; justify-content: left; background-color: #3d4459; color: white; }
+
+.textbox { padding: 20px 60px 20px 60px; background-color: #2E2E2E; margin: 1.5em; text-align: left; color: white; }
+.enterbox { padding: 20px 60px 20px 60px; background-color: #2E2E2E; margin: 1.5em; color: white; }
+
+table { border-collapse: collapse; margin: 1.5em auto; table-layout: fixed; background-color: white; table-layout: auto; width: 1000px; }
+table th { background-color: #ffcdcd; border: 1px solid gray; padding: 8px; }
+table td { border: 1px solid gray; padding: 8px; overflow: hidden; }
+
+.navbar { list-style-type: none; margin: 0; padding: 0; background-color: #3d4459; 
+    position: fixed; top: 0; width: 100%; overflow: auto; white-space: nowrap; text-align: left }
+
+.nav {
+    display: inline-block;
+    color: #f3f3f3;
+    padding: 20px 60px 20px 60px;
+    text-decoration: none;
+}
+
+a:hover.nav, a:active.nav, #brightness:hover, #brightness:active {
+    background-color: #4d5d71;
+    color: white;
+    transition: 0.1s;
+    cursor: pointer;
+}
+
+#title.nav {
+    font-weight: bold;
+}
+
+#title:hover.nav, #title:active.nav {
+    background-color: #5588aa;
+    color: white;
+    transition: 0.1s
+}
+
+#brightness { background-color: #3d4459; border: none; background: none; font-size: 1em; }
+
+footer { padding: 40px 0px; background-color: #3d4459; color: white;  width: 100%; text-align: center }

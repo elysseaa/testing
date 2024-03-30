@@ -8,24 +8,25 @@
     <meta name="viewport" content="width=device-width" /> 
     <title>testing</title>
 
-    <%- `<style>@import "${cssfile}"</style>` -%>
-    <%- `<script src="${jsfile}"></script>` -%>
+    <%- `<link rel="stylesheet" type="text/css" href="${cssfile}" class="csslink"/>` -%>
 </head>
 
 <body>
-    <h1>testing</h1>
-    <div>
-        <ul>
-        <li><a href='.' class='nav'>Home</a></li>
-        <li><a href='.' class='nav'>Placeholder 1</a></li>
-        <li><a href='.' class='nav'>Placeholder 2</a></li>
-        </ul>
+    <div class='navbar'>
+        <a href='.' class='nav' id='title'>Title</a></li>
+        <a href='.' class='nav'>Art</a></li>
+        <a href='.' class='nav'>Code</a></li>
+        <a href='.' class='nav'>Miscellany</a></li>
+        <a href='.' class='nav'>About</a></li>
+        <button id='brightness' class='nav'>Day/Night</button>
     </div>
-    <div id='textbox'>
+
+    <div class='textbox'>
         <h3>Description</h3>
     <%- include(page); -%>
     <footer>
         <p>2024 Elysse Ahmad Yusri</p>
     </footer>
-    </body>
+    <%- `<script id='script' src="${jsfile}" ></script>` -%>
+</body>
 </html>        

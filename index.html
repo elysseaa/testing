@@ -7,28 +7,30 @@
     <meta charset='utf-8' />
     <meta name="viewport" content="width=device-width" /> 
     <title>testing</title>
-    <link rel="stylesheet" href="./styles/style.css"> 
+    <link rel="stylesheet" href="./styles/day.css" class="csslink"> 
 </head>
 
 <body>
     <h1>testing</h1>
-    <div>
-        <ul>
-        <li><a href='./index.html' class='nav'>Home</a></li>
-        <li><a href='./index.html' class='nav'>Placeholder 1</a></li>
-        <li><a href='./index.html' class='nav'>Placeholder 2</a></li>
-        </ul>
+    <div class='navbar'>
+        <a href='index.html' class='nav' id='title'>Title</a></li>
+        <a href='index.html' class='nav'>Art</a></li>
+        <a href='index.html' class='nav'>Code</a></li>
+        <a href='index.html' class='nav'>Miscellany</a></li>
+        <a href='index.html' class='nav'>About</a></li>
+        <button id='brightness' class='nav'>Day/Night</button>
     </div>
 
-    <div id="textbox">
-        <h3>Description</h3>
-        <p>Extreme amounts of testing are happening</p>
+    <div class="textbox">
+        <h3>Note about this project</h3>
+        <p>I made this using expressjs, but github pages doesn't allow dynamically-loaded content.</p>
+        <p>Full functionality is available when running node with the app.js file in this repository.</p>
     </div>
 
     <footer>
         <p>2024 Elysse Ahmad Yusri</p>
     </footer>
     
-    <script src="./scripts/script.js"></script>
+    <script src="./scripts/index_static.js"></script> 
 </body>
 </html>

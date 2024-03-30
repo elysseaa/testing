@@ -22,8 +22,8 @@ for (var i = 0; i < pages.length; i++){
 app.get("/", function (req, res){
     res.render("template", {
         page: "index", 
-        cssfile: "style.css",
-        jsfile: "",
+        cssfile: "night.css",
+        jsfile: "index.js"
     });
 });
 
