@@ -1,3 +1,10 @@
+/**
+ * Basic Functions
+ */
+
+function getId(foo) { return document.getElementById(foo); }
+function getClass(foo) { return document.getElementsByClassName(foo); }
+
 initializeBrightness();
 
 function initializeBrightness () {
@@ -25,7 +32,6 @@ function initializeBrightness () {
 }
 
 function setBrightness (brightness) {
-    // getClass('csslink')[0].setAttribute('href', brightness + ".css");
     console.log(brightness);
     localStorage.setItem("brightness", brightness);
     var xhr = new XMLHttpRequest;

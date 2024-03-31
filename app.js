@@ -4,31 +4,32 @@ let ejs = require('ejs');
 
 app.set("view engine", "ejs");
 
-/*
-var pages = [
+/* Rendering requests */
 
-]
-for (var i = 0; i < pages.length; i++){
-    app.get(pages[i], function (req, res){
-        res.render("template", {
-            page: req.route.path.substring(1).replace(".html", ""), 
-            cssfile: "style.css",
-            jsfile: req.route.path.substring(1).replace(".html", ".js"),
-        });
-    });
-}
-*/
+var pages = ["/art", "/code", "/miscellany", "/about"]
 
 var cssfile = "night.css";
 var jsfile = "initialize.js";
 
-app.get("/", function (req, res){
+for (var i=0; i < pages.length; i++) {
+    app.get(pages[i], function (req, res) {
+        res.render("template", {
+            page: req.route.path.substring(1),
+            cssfile: cssfile,
+            jsfile: jsfile
+        });
+    });
+}
+
+app.get("/", function (req, res) { 
     res.render("template", {
-        page: "index", 
+        page: "index",
         cssfile: cssfile,
         jsfile: jsfile
     });
-});
+})
+
+/* Non-rendering requests */
 
 app.get("/brightness", function (req, res){
     var brightness = req.query.mode ? req.query.mode : "night";
@@ -37,6 +38,8 @@ app.get("/brightness", function (req, res){
     console.log("brightness", brightness);
     res.redirect("/");
 })
+
+/* Static files */
 
 app.use(express.static('public'));
 app.use(express.static('scripts'));

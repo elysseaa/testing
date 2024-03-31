@@ -1,9 +1,12 @@
-html { scroll-padding-top: 80px; }
-
 body { font-family: sans-serif; background-color: #f3f3f3; color: #22223b; 
     margin: 80px auto; margin-bottom: 0px; transition: 0.3s ease-out; }
 body * { transition: 0.2s ease-out; }
 h1 { padding: 40px; display: flex; justify-content: left; background-color: #5588aa; color: white; }
+
+/* Links */
+a { text-decoration: none; }
+a.regular { color: white }
+a.regular:hover { text-decoration: underline; }
 
 /* Textboxes */
 
@@ -25,7 +28,7 @@ table td { border: 1px solid gray; padding: 8px; overflow: hidden; }
     display: inline-block;
     color: #f3f3f3;
     padding: 20px 60px 20px 60px;
-    text-decoration: none;
+    vertical-align: middle;
 }
 
 a:hover.nav, a:active.nav, #brightness:hover, #brightness:active {
@@ -37,6 +40,8 @@ a:hover.nav, a:active.nav, #brightness:hover, #brightness:active {
 
 #title.nav {
     font-weight: bold;
+    font-size: 1.5em;
+    padding: 16px 60px 16px 60px;
 }
 
 #title:hover.nav, #title:active.nav {
