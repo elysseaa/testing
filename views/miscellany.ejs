@@ -1,4 +1,34 @@
+<h1>Miscellany</h1>
 <div class='textbox'>
     <h3>Description</h3>
-    <p>This is where miscellany would go</p>
+    <p>This is where blogs would document my graphic design prowess.</p>
+</div>
+
+<div class='textbox'>
+    <h3>Blog 1: Day/Night Mode</h3>
+    <p>This took a long time to do:</p>
+    <img src="/media/brightness_toggle.gif" alt="Brightness Toggle Gif" id="brightness_toggle.gif">
+    <ol>
+        <li>If you are loading the page for the first time, it detects the user's 
+            operating system color scheme and sets the website theme accordingly. 
+        </li>
+        <li>It keeps track of what the chosen color scheme is via the user's local storage
+            so that the color scheme doesn't change when the page is reloaded or reopened. 
+        </li>
+        <li>There is a cool transition when the user presses the "change color scheme" button.</li>
+    </ol>
+    <p>Each file is initially run with an "initialize.js" file because express doesn't have 
+        access to frontend data like local storage, and the page is rerendered once this js file
+        deduces the right color scheme to use. This uses two months' worth of AJAX and Express knowledge - 
+        although it's probably inefficient, I think it looks cool.
+    </p>
+    <h4>Things I want to implement</h4>
+    <p>I want to be able to load these blogs using MongoDB because I think it's neat.
+        I'm also going to learn more about React in a few weeks, so if I have time I'll 
+        rework this site to use React.
+    </p>
+    <p>I also don't know how I'd host this site? Github Pages only hosts static sites.
+        While I'll probably make a really simple version of site on it, I'll look into 
+        other places I can host this without breaking too many website laws.
+    </p>
 </div>

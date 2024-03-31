@@ -31,10 +31,15 @@ function initializeBrightness () {
     }
 }
 
+var xhr = new XMLHttpRequest;
+
 function setBrightness (brightness) {
-    console.log(brightness);
     localStorage.setItem("brightness", brightness);
-    var xhr = new XMLHttpRequest;
+    xhr = new XMLHttpRequest;
+    console.log(xhr);
+    xhr.onreadystatechange = function () {
+        window.location.reload();
+    };
     xhr.open("GET", "/brightness?mode=" + brightness);
     xhr.send();
 }

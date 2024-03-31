@@ -1,7 +1,7 @@
 body { font-family: sans-serif; background-color: #f3f3f3; color: #22223b; 
-    margin: 80px auto; margin-bottom: 0px; transition: 0.3s ease-out; }
+    margin: 80px auto; margin-bottom: 0px; transition: 0.2s ease-out; }
 body * { transition: 0.2s ease-out; }
-h1 { padding: 40px; display: flex; justify-content: left; background-color: #5588aa; color: white; }
+h1 { padding: 40px 80px 20px 80px; display: flex; justify-content: left; color: #22223b; }
 
 /* Links */
 a { text-decoration: none; }
@@ -10,8 +10,11 @@ a.regular:hover { text-decoration: underline; }
 
 /* Textboxes */
 
-.textbox { padding: 20px 60px 20px 60px; background-color: white; margin: 1.5em; text-align: left; }
-.enterbox { padding: 20px 60px 20px 60px; background-color: white; margin: 1.5em; }
+.textbox { padding: 20px 100px 20px 100px; background-color: white; margin: 1.5em; text-align: left; line-height: 1.8; }
+.enterbox { padding: 20px 100px 20px 100px; background-color: white; margin: 1.5em; line-height: 1.8; }
+
+/* Lists */
+li { line-height: 1.8; }
 
 /* Table */
 
