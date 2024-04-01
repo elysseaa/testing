@@ -8,7 +8,6 @@ function getClass(foo) { return document.getElementsByClassName(foo); }
 /**
  * Day/Night
  */
-
 getId('brightness').onclick = updateBrightness;
 
 var xhr = new XMLHttpRequest;
@@ -27,3 +26,28 @@ function updateBrightness () {
     xhr.open("GET", "/brightness?mode=" + brightness);
     xhr.send();
 }
+
+/**
+ * Anchor scrolling
+ */
+
+window.onload = setDividers;
+
+function setDividers () {
+    const ids = ["art", "code", "title"];
+    const dividers = getClass("divider")
+    
+    for (var i=0; i < ids.length; i++) {
+        const divider = dividers[i];
+        const id = getId(ids[i]);
+
+        divider.addEventListener('click', function () {
+            id.scrollIntoView();
+        })
+    }
+}
+//getClass("divider")
+//loop through divider
+//add event listener scrolling id into view
+
+//fix this

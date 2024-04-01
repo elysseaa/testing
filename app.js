@@ -35,7 +35,6 @@ app.get("/brightness", function (req, res){
     var brightness = req.query.mode ? req.query.mode : "night";
     cssfile = brightness + ".css";
     jsfile = "index.js";
-    console.log("brightness", brightness);
     res.redirect("/");
 })
 

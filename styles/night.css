@@ -2,29 +2,42 @@
     box-sizing: border-box;
 }
 
+html { scroll-behavior: smooth; }
+
 body { font-family: sans-serif; background: linear-gradient(hsl(0, 0%, 7%), hsl(0, 0%, 21%)); color: white; 
     margin: 80px auto; margin-bottom: 0px; transition: 0.2s ease-out; }
 body * { transition: 0.2s ease-out; }
 
+/* Icons */
+.material-symbols-outlined.down { font-size: 3em; color: white; z-index: 1; }
+.material-symbols-outlined.up { font-size: 3em; color: white; rotate: 180deg; z-index: 1; }
+
 /* Headings */
 h1 { font-size: 2.5em; padding: 40px 80px 20px 80px; display: flex; position: relative;
-    justify-content: left; color: white; z-index: -1; }
-p { position: relative; }
+    justify-content: left; color: white }
+p { position: relative; z-index: 1; }
 
 /* Sections */
-.textbox { padding: 20px 100px 20px 100px; background-color: hsla(0, 0%, 29%, 0.8); 
+.textbox { padding: 20px min(100px, 15%) 20px min(100px, 15%); background-color: hsla(213, 14%, 25%, 0.8);
     margin: 1.5em; text-align: left; color: white; line-height: 2; }
 .enterbox { padding: 20px 100px 20px 100px; background-color: hsl(0, 0%, 18%); margin: 1.5em; color: white; line-height: 1.8; }
+
 .divider { padding: 40px 80px 40px 80px; display: flex; justify-content: center; color: white; 
-    font-size: 1.5em; position: relative; z-index: -1; }
+    font-size: 1.5em; position: relative; }
 .divider::before { background-image:url("color-test.jpg"); background-size: cover; 
     content: ""; position: absolute; top: 0; bottom: 0; left: 0;
-    right: 0; width: auto; height: auto; opacity: 0.75; }
+    right: 0; width: auto; height: auto; opacity: 0.7; 
+}
+.divider:hover { background-color: hsla(0, 0%, 100%, 0.3); }
 
 /* Links */
 a { text-decoration: none; }
 a.regular { color: white }
 a.regular:hover { text-decoration: underline; }
+
+/* Anchors */
+.anchor-down { scroll-margin-top: 84px; }
+.anchor-up { scroll-margin-top: 2em; }
 
 /* Images */
 img { max-width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto; }
@@ -42,7 +55,7 @@ table td { border: 1px solid gray; padding: 8px; overflow: hidden; }
 
 .navbar { list-style-type: none; margin: 0; background: hsla(220, 5%, 12%, 0.8);
     position: fixed; top: 0; width: 100%; overflow: auto; white-space: nowrap; 
-    border-bottom: white solid 2px; }
+    border-bottom: white solid 2px; z-index: 2; }
 
 .nav {
     display: inline-block;
@@ -52,19 +65,19 @@ table td { border: 1px solid gray; padding: 8px; overflow: hidden; }
 }
 
 a:hover.nav, a:active.nav, #brightness:hover, #brightness:active {
-    background-color: hsl(213, 14%, 25%);
+    background-color: hsl(213, 14%, 25%, 0.6);
     color: white;
     transition: 0.1s;
     cursor: pointer;
 }
 
-#title.nav {
+#nav-title.nav {
     font-weight: bold;
     font-size: 1.5em;
     padding: 15px 60px 16px 60px;
 }
 
-#title:hover.nav, #title:active.nav {
+#nav-title:hover.nav, #nav-title:active.nav {
     background-color: hsla(204, 33%, 50%, 0.8);
     color: white;
     transition: 0.1s
@@ -73,6 +86,5 @@ a:hover.nav, a:active.nav, #brightness:hover, #brightness:active {
 #brightness { font-size: 20px; padding: 16px 60px 16px 60px; background-color: hsl(225, 19%, 29%); border: none; background: none; }
 
 /* Footer */
-
 footer { padding: 40px 0px; background-color: hsla(220, 5%, 12%, 0.8); color: white;  
     width: 100%; text-align: center }
