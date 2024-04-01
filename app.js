@@ -41,7 +41,7 @@ app.get("/brightness", function (req, res){
 
 /* Static files */
 
-app.use(express.static('public'));
+app.use(express.static('public/media'));
 app.use(express.static('scripts'));
 app.use(express.static('styles'));
 
